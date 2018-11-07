@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Coda:400,800');
+
+html{
+    box-sizing: border-box;
+    font-family: "Coda", sans-serif;
+}
+
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+.wrapper{
+    margin: 100px auto 0 auto;
+    width: 1000px;
+    height: 600px;
+    align-content: center;
+}
+
+
+/* Titre animé */
+    .titre{
+        z-index: 2;
+        position: relative;
+        display: block;
+        width: 500px;
+        height: 100px;
+        text-align: center;
+        margin: 10px auto 85px auto;
+        
+        text-decoration: none;
+        color: #000;
+        padding: 0.6em 0;
+        
+        overflow: hidden;
+
+        border-bottom: 5px solid steelblue;
+    }
+
+    .animation{
+        z-index: -1;
+        position: absolute;
+        background-color: steelblue;
+        width: 1000px;
+        height: 200px;
+        top: 0;
+        left: -50%;
+
+        transform-origin: 50% 0%;
+
+        animation: animTitre 0.5s forwards;
+    }
+
+    .titre h1{
+        animation: couleurTitre 0.5 forwards;
+    }
+
+    @keyframes animTitreInverse{
+        0%{
+            top: 95px;
+        }
+
+
+        40%{
+            transform: rotate(10deg);
+        }
+
+
+
+
+
+        95%{
+            transform: rotate(0deg);
+        }
+
+        100%{
+            top: -5px;
+        }
+    }
+
+    @keyframes animTitre{
+        0%{
+            top: 0px;
+        }
+
+        20%{
+            top: 95px
+        }
+
+        40%{
+            top: 70px
+        }
+
+        60%{
+            top: 95px
+        }
+
+        80%{
+            top: 85px
+        }
+
+        100%{
+            top: 95px;
+        }
+    }
+
+    @keyframes couleurTitreInverse{
+        0%{
+            color: black;
+        }
+
+        24%{
+            color: black;
+        }
+
+        25%{
+            color: white;
+        }
+
+        100%{
+            color: white;
+        }
+    }
+
+    @keyframes couleurTitre{
+        0%{
+            color: white;
+        }
+
+        20%{
+            color: white;
+        }
+
+        21%{
+            color: black;
+        }
+
+        100%{
+            color: black;
+        }
+    }
+
+    .titre:hover .animation{
+        animation: animTitreInverse 0.5s forwards;
+    }
+
+    .titre:hover h1{
+        animation: couleurTitreInverse 0.5s forwards;
+    }
+
+/* Gallerie d'images */
+    .images{
+        /* padding-top: 100px; */
+        padding-left: 150px;
+    }
+
+    .image{
+        display: inline-block;
+        text-decoration: none;
+        background-color: black;
+        transform: rotate(45deg);
+        text-align: center;
+        vertical-align: middle;
+        
+        margin-left: -50px;
+
+        height: 200px;
+        width: 200px;
+
+        position: relative;
+    }
+
+    .image:nth-child(2n){
+        top: 150px;
+    }
+
+    h2{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 110%;
+        margin: 40% 0 40% 0;
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 1;
+        font-weight: 800;
+        color: #fff;
+        transform: rotate(-45deg);
+        
+        font-size: 1.6em;
+        
+        transition: color 1s;
+        
+        text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+        
+    }
+
+    img{
+        transform: translate(-15%, -15%) rotate(-45deg);
+        height: 280px;
+        opacity: 0.5;
+        
+        transition: transform 1s, opacity 1s;
+        
+        z-index: 0;
+    }
+
+    .image:hover img{
+        transform: translate(-15%, -15%) scale(1.2,1.2) rotate(-45deg);
+        opacity: 1;
+    }
+
+    .carre{
+        height: 200px;
+        width: 200px;
+        
+        border: 5px solid #000;
+        
+        overflow: hidden; 
+        
+        transition: border 1s;
+    }
+
+
+    .image:hover .cun{
+        border: 5px solid orange;
+    }
+
+    .image:hover .cdeux{
+        border: 5px solid rgb(99, 199, 0);
+    }
+
+    .image:hover .ctrois{
+        border: 5px solid rgb(36, 157, 255);
+    }
+
+    .image:hover .cquatre{
+        border: 5px solid rgb(190, 0, 190);
+    }
+
+    .image:hover .ccinq{
+        border: 5px solid rgb(255, 74, 74);
+    }
+
+
+    .image:hover .pun{
+        color: orange;
+    }
+    .image:hover .pdeux{
+        color: rgb(99, 199, 0);
+    }
+    .image:hover .ptrois{
+        color: rgb(36, 157, 255);
+    }
+    .image:hover .pquatre{
+        color: rgb(190, 0, 190);
+    }
+    .image:hover .pcinq{
+        color: rgb(255, 74, 74);
+    }
+
+
+
+    .image:active .carre{
+        transition: border 0.5s;
+        border: 5px solid red;
+    }
+
+    span{
+        transform: rotate(-45deg);
+    }
