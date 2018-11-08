@@ -222,41 +222,54 @@ html{
     }
 
 
-    .image:hover .cun{
+    .image:hover .cOrange{
         border: 5px solid orange;
     }
 
-    .image:hover .cdeux{
+    .image:hover .cVert{
         border: 5px solid rgb(99, 199, 0);
     }
 
-    .image:hover .ctrois{
+    .image:hover .cBleu{
         border: 5px solid rgb(36, 157, 255);
     }
 
-    .image:hover .cquatre{
+    .image:hover .cViolet{
         border: 5px solid rgb(190, 0, 190);
     }
 
-    .image:hover .ccinq{
+    .image:hover .cRouge{
         border: 5px solid rgb(255, 74, 74);
     }
+    .image:hover .cJaune{
+        border: 5px solid rgb(251, 255, 0);
+    }
+    .image:hover .cGris{
+        border: 5px solid #5a7390;
+    }
 
 
-    .image:hover .pun{
+
+    .image:hover .pOrange{
         color: orange;
     }
-    .image:hover .pdeux{
+    .image:hover .pVert{
         color: rgb(99, 199, 0);
     }
-    .image:hover .ptrois{
+    .image:hover .pBleu{
         color: rgb(36, 157, 255);
     }
-    .image:hover .pquatre{
+    .image:hover .pViolet{
         color: rgb(190, 0, 190);
     }
-    .image:hover .pcinq{
+    .image:hover .pRouge{
         color: rgb(255, 74, 74);
+    }
+    .image:hover .pJaune{
+        color: rgb(251, 255, 0);
+    }
+    .image:hover .pGris{
+        color: #5a7390;
     }
 
 
@@ -268,4 +281,8 @@ html{
 
     span{
         transform: rotate(-45deg);
+    }
+
+    .ligneDeux{
+        margin-top: 100px;
     }
